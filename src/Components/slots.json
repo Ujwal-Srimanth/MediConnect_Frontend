@@ -1,0 +1,1815 @@
+{
+  "doctorId": "DOC123",
+  "defaultSchedule": [
+    {
+      "startTime": "09:00",
+      "endTime": "13:00"
+    },
+    {
+      "startTime": "13:30",
+      "endTime": "17:00"
+    }
+  ],
+  "slots": [
+    {
+      "slotId": "2025-08-18T09:00-09:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T09:00:00",
+      "endDateTime": "2025-08-18T09:15:00",
+      "isBooked": true,
+      "patientId": "Patient123",
+      "purpose": "Something"
+    },
+    {
+      "slotId": "2025-08-18T09:15-09:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T09:15:00",
+      "endDateTime": "2025-08-18T09:30:00",
+      "isBooked": true,
+      "patientId": "Patient123",
+      "purpose": "Nothing"
+    },
+    {
+      "slotId": "2025-08-18T09:30-09:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T09:30:00",
+      "endDateTime": "2025-08-18T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T09:45-10:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T09:45:00",
+      "endDateTime": "2025-08-18T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T10:00-10:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T10:00:00",
+      "endDateTime": "2025-08-18T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T10:15-10:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T10:15:00",
+      "endDateTime": "2025-08-18T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T10:30-10:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T10:30:00",
+      "endDateTime": "2025-08-18T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T10:45-11:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T10:45:00",
+      "endDateTime": "2025-08-18T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T11:00-11:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T11:00:00",
+      "endDateTime": "2025-08-18T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T11:15-11:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T11:15:00",
+      "endDateTime": "2025-08-18T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T11:30-11:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T11:30:00",
+      "endDateTime": "2025-08-18T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T11:45-12:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T11:45:00",
+      "endDateTime": "2025-08-18T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T12:00-12:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T12:00:00",
+      "endDateTime": "2025-08-18T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T12:15-12:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T12:15:00",
+      "endDateTime": "2025-08-18T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T12:30-12:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T12:30:00",
+      "endDateTime": "2025-08-18T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T12:45-13:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T12:45:00",
+      "endDateTime": "2025-08-18T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T13:30-13:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T13:30:00",
+      "endDateTime": "2025-08-18T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T13:45-14:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T13:45:00",
+      "endDateTime": "2025-08-18T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T14:00-14:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T14:00:00",
+      "endDateTime": "2025-08-18T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T14:15-14:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T14:15:00",
+      "endDateTime": "2025-08-18T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T14:30-14:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T14:30:00",
+      "endDateTime": "2025-08-18T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T14:45-15:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T14:45:00",
+      "endDateTime": "2025-08-18T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T15:00-15:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T15:00:00",
+      "endDateTime": "2025-08-18T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T15:15-15:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T15:15:00",
+      "endDateTime": "2025-08-18T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T15:30-15:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T15:30:00",
+      "endDateTime": "2025-08-18T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T15:45-16:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T15:45:00",
+      "endDateTime": "2025-08-18T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T16:00-16:15",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T16:00:00",
+      "endDateTime": "2025-08-18T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T16:15-16:30",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T16:15:00",
+      "endDateTime": "2025-08-18T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T16:30-16:45",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T16:30:00",
+      "endDateTime": "2025-08-18T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-18T16:45-17:00",
+      "date": "2025-08-18",
+      "day": "Monday",
+      "startDateTime": "2025-08-18T16:45:00",
+      "endDateTime": "2025-08-18T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T09:00-09:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T09:00:00",
+      "endDateTime": "2025-08-19T09:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T09:15-09:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T09:15:00",
+      "endDateTime": "2025-08-19T09:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T09:30-09:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T09:30:00",
+      "endDateTime": "2025-08-19T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T09:45-10:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T09:45:00",
+      "endDateTime": "2025-08-19T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T10:00-10:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T10:00:00",
+      "endDateTime": "2025-08-19T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T10:15-10:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T10:15:00",
+      "endDateTime": "2025-08-19T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T10:30-10:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T10:30:00",
+      "endDateTime": "2025-08-19T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T10:45-11:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T10:45:00",
+      "endDateTime": "2025-08-19T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T11:00-11:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T11:00:00",
+      "endDateTime": "2025-08-19T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T11:15-11:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T11:15:00",
+      "endDateTime": "2025-08-19T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T11:30-11:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T11:30:00",
+      "endDateTime": "2025-08-19T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T11:45-12:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T11:45:00",
+      "endDateTime": "2025-08-19T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T12:00-12:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T12:00:00",
+      "endDateTime": "2025-08-19T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T12:15-12:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T12:15:00",
+      "endDateTime": "2025-08-19T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T12:30-12:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T12:30:00",
+      "endDateTime": "2025-08-19T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T12:45-13:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T12:45:00",
+      "endDateTime": "2025-08-19T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T13:30-13:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T13:30:00",
+      "endDateTime": "2025-08-19T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T13:45-14:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T13:45:00",
+      "endDateTime": "2025-08-19T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T14:00-14:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T14:00:00",
+      "endDateTime": "2025-08-19T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T14:15-14:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T14:15:00",
+      "endDateTime": "2025-08-19T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T14:30-14:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T14:30:00",
+      "endDateTime": "2025-08-19T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T14:45-15:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T14:45:00",
+      "endDateTime": "2025-08-19T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T15:00-15:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T15:00:00",
+      "endDateTime": "2025-08-19T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T15:15-15:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T15:15:00",
+      "endDateTime": "2025-08-19T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T15:30-15:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T15:30:00",
+      "endDateTime": "2025-08-19T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T15:45-16:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T15:45:00",
+      "endDateTime": "2025-08-19T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T16:00-16:15",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T16:00:00",
+      "endDateTime": "2025-08-19T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T16:15-16:30",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T16:15:00",
+      "endDateTime": "2025-08-19T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T16:30-16:45",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T16:30:00",
+      "endDateTime": "2025-08-19T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-19T16:45-17:00",
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "startDateTime": "2025-08-19T16:45:00",
+      "endDateTime": "2025-08-19T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T09:00-09:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T09:00:00",
+      "endDateTime": "2025-08-20T09:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T09:15-09:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T09:15:00",
+      "endDateTime": "2025-08-20T09:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T09:30-09:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T09:30:00",
+      "endDateTime": "2025-08-20T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T09:45-10:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T09:45:00",
+      "endDateTime": "2025-08-20T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T10:00-10:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T10:00:00",
+      "endDateTime": "2025-08-20T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T10:15-10:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T10:15:00",
+      "endDateTime": "2025-08-20T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T10:30-10:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T10:30:00",
+      "endDateTime": "2025-08-20T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T10:45-11:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T10:45:00",
+      "endDateTime": "2025-08-20T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T11:00-11:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T11:00:00",
+      "endDateTime": "2025-08-20T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T11:15-11:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T11:15:00",
+      "endDateTime": "2025-08-20T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T11:30-11:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T11:30:00",
+      "endDateTime": "2025-08-20T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T11:45-12:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T11:45:00",
+      "endDateTime": "2025-08-20T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T12:00-12:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T12:00:00",
+      "endDateTime": "2025-08-20T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T12:15-12:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T12:15:00",
+      "endDateTime": "2025-08-20T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T12:30-12:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T12:30:00",
+      "endDateTime": "2025-08-20T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T12:45-13:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T12:45:00",
+      "endDateTime": "2025-08-20T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T13:30-13:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T13:30:00",
+      "endDateTime": "2025-08-20T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T13:45-14:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T13:45:00",
+      "endDateTime": "2025-08-20T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T14:00-14:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T14:00:00",
+      "endDateTime": "2025-08-20T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T14:15-14:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T14:15:00",
+      "endDateTime": "2025-08-20T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T14:30-14:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T14:30:00",
+      "endDateTime": "2025-08-20T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T14:45-15:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T14:45:00",
+      "endDateTime": "2025-08-20T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T15:00-15:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T15:00:00",
+      "endDateTime": "2025-08-20T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T15:15-15:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T15:15:00",
+      "endDateTime": "2025-08-20T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T15:30-15:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T15:30:00",
+      "endDateTime": "2025-08-20T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T15:45-16:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T15:45:00",
+      "endDateTime": "2025-08-20T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T16:00-16:15",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T16:00:00",
+      "endDateTime": "2025-08-20T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T16:15-16:30",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T16:15:00",
+      "endDateTime": "2025-08-20T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T16:30-16:45",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T16:30:00",
+      "endDateTime": "2025-08-20T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-20T16:45-17:00",
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "startDateTime": "2025-08-20T16:45:00",
+      "endDateTime": "2025-08-20T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T09:00-09:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T09:00:00",
+      "endDateTime": "2025-08-21T09:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T09:15-09:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T09:15:00",
+      "endDateTime": "2025-08-21T09:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T09:30-09:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T09:30:00",
+      "endDateTime": "2025-08-21T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T09:45-10:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T09:45:00",
+      "endDateTime": "2025-08-21T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T10:00-10:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T10:00:00",
+      "endDateTime": "2025-08-21T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T10:15-10:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T10:15:00",
+      "endDateTime": "2025-08-21T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T10:30-10:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T10:30:00",
+      "endDateTime": "2025-08-21T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T10:45-11:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T10:45:00",
+      "endDateTime": "2025-08-21T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T11:00-11:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T11:00:00",
+      "endDateTime": "2025-08-21T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T11:15-11:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T11:15:00",
+      "endDateTime": "2025-08-21T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T11:30-11:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T11:30:00",
+      "endDateTime": "2025-08-21T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T11:45-12:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T11:45:00",
+      "endDateTime": "2025-08-21T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T12:00-12:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T12:00:00",
+      "endDateTime": "2025-08-21T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T12:15-12:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T12:15:00",
+      "endDateTime": "2025-08-21T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T12:30-12:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T12:30:00",
+      "endDateTime": "2025-08-21T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T12:45-13:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T12:45:00",
+      "endDateTime": "2025-08-21T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T13:30-13:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T13:30:00",
+      "endDateTime": "2025-08-21T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T13:45-14:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T13:45:00",
+      "endDateTime": "2025-08-21T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T14:00-14:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T14:00:00",
+      "endDateTime": "2025-08-21T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T14:15-14:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T14:15:00",
+      "endDateTime": "2025-08-21T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T14:30-14:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T14:30:00",
+      "endDateTime": "2025-08-21T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T14:45-15:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T14:45:00",
+      "endDateTime": "2025-08-21T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T15:00-15:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T15:00:00",
+      "endDateTime": "2025-08-21T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T15:15-15:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T15:15:00",
+      "endDateTime": "2025-08-21T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T15:30-15:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T15:30:00",
+      "endDateTime": "2025-08-21T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T15:45-16:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T15:45:00",
+      "endDateTime": "2025-08-21T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T16:00-16:15",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T16:00:00",
+      "endDateTime": "2025-08-21T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T16:15-16:30",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T16:15:00",
+      "endDateTime": "2025-08-21T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T16:30-16:45",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T16:30:00",
+      "endDateTime": "2025-08-21T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-21T16:45-17:00",
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "startDateTime": "2025-08-21T16:45:00",
+      "endDateTime": "2025-08-21T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T09:00-09:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T09:00:00",
+      "endDateTime": "2025-08-22T09:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T09:15-09:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T09:15:00",
+      "endDateTime": "2025-08-22T09:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T09:30-09:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T09:30:00",
+      "endDateTime": "2025-08-22T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T09:45-10:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T09:45:00",
+      "endDateTime": "2025-08-22T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T10:00-10:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T10:00:00",
+      "endDateTime": "2025-08-22T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T10:15-10:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T10:15:00",
+      "endDateTime": "2025-08-22T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T10:30-10:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T10:30:00",
+      "endDateTime": "2025-08-22T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T10:45-11:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T10:45:00",
+      "endDateTime": "2025-08-22T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T11:00-11:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T11:00:00",
+      "endDateTime": "2025-08-22T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T11:15-11:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T11:15:00",
+      "endDateTime": "2025-08-22T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T11:30-11:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T11:30:00",
+      "endDateTime": "2025-08-22T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T11:45-12:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T11:45:00",
+      "endDateTime": "2025-08-22T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T12:00-12:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T12:00:00",
+      "endDateTime": "2025-08-22T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T12:15-12:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T12:15:00",
+      "endDateTime": "2025-08-22T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T12:30-12:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T12:30:00",
+      "endDateTime": "2025-08-22T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T12:45-13:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T12:45:00",
+      "endDateTime": "2025-08-22T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T13:30-13:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T13:30:00",
+      "endDateTime": "2025-08-22T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T13:45-14:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T13:45:00",
+      "endDateTime": "2025-08-22T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T14:00-14:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T14:00:00",
+      "endDateTime": "2025-08-22T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T14:15-14:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T14:15:00",
+      "endDateTime": "2025-08-22T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T14:30-14:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T14:30:00",
+      "endDateTime": "2025-08-22T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T14:45-15:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T14:45:00",
+      "endDateTime": "2025-08-22T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T15:00-15:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T15:00:00",
+      "endDateTime": "2025-08-22T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T15:15-15:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T15:15:00",
+      "endDateTime": "2025-08-22T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T15:30-15:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T15:30:00",
+      "endDateTime": "2025-08-22T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T15:45-16:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T15:45:00",
+      "endDateTime": "2025-08-22T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T16:00-16:15",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T16:00:00",
+      "endDateTime": "2025-08-22T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T16:15-16:30",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T16:15:00",
+      "endDateTime": "2025-08-22T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T16:30-16:45",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T16:30:00",
+      "endDateTime": "2025-08-22T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-22T16:45-17:00",
+      "date": "2025-08-22",
+      "day": "Friday",
+      "startDateTime": "2025-08-22T16:45:00",
+      "endDateTime": "2025-08-22T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T09:00-09:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T09:00:00",
+      "endDateTime": "2025-08-23T09:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T09:15-09:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T09:15:00",
+      "endDateTime": "2025-08-23T09:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T09:30-09:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T09:30:00",
+      "endDateTime": "2025-08-23T09:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T09:45-10:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T09:45:00",
+      "endDateTime": "2025-08-23T10:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T10:00-10:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T10:00:00",
+      "endDateTime": "2025-08-23T10:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T10:15-10:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T10:15:00",
+      "endDateTime": "2025-08-23T10:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T10:30-10:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T10:30:00",
+      "endDateTime": "2025-08-23T10:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T10:45-11:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T10:45:00",
+      "endDateTime": "2025-08-23T11:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T11:00-11:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T11:00:00",
+      "endDateTime": "2025-08-23T11:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T11:15-11:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T11:15:00",
+      "endDateTime": "2025-08-23T11:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T11:30-11:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T11:30:00",
+      "endDateTime": "2025-08-23T11:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T11:45-12:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T11:45:00",
+      "endDateTime": "2025-08-23T12:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T12:00-12:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T12:00:00",
+      "endDateTime": "2025-08-23T12:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T12:15-12:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T12:15:00",
+      "endDateTime": "2025-08-23T12:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T12:30-12:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T12:30:00",
+      "endDateTime": "2025-08-23T12:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T12:45-13:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T12:45:00",
+      "endDateTime": "2025-08-23T13:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T13:30-13:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T13:30:00",
+      "endDateTime": "2025-08-23T13:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T13:45-14:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T13:45:00",
+      "endDateTime": "2025-08-23T14:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T14:00-14:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T14:00:00",
+      "endDateTime": "2025-08-23T14:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T14:15-14:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T14:15:00",
+      "endDateTime": "2025-08-23T14:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T14:30-14:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T14:30:00",
+      "endDateTime": "2025-08-23T14:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T14:45-15:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T14:45:00",
+      "endDateTime": "2025-08-23T15:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T15:00-15:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T15:00:00",
+      "endDateTime": "2025-08-23T15:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T15:15-15:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T15:15:00",
+      "endDateTime": "2025-08-23T15:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T15:30-15:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T15:30:00",
+      "endDateTime": "2025-08-23T15:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T15:45-16:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T15:45:00",
+      "endDateTime": "2025-08-23T16:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T16:00-16:15",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T16:00:00",
+      "endDateTime": "2025-08-23T16:15:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T16:15-16:30",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T16:15:00",
+      "endDateTime": "2025-08-23T16:30:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T16:30-16:45",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T16:30:00",
+      "endDateTime": "2025-08-23T16:45:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    },
+    {
+      "slotId": "2025-08-23T16:45-17:00",
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "startDateTime": "2025-08-23T16:45:00",
+      "endDateTime": "2025-08-23T17:00:00",
+      "isBooked": false,
+      "patientId": null,
+      "purpose": null
+    }
+  ]
+}
