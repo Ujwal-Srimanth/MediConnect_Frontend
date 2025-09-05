@@ -27,9 +27,9 @@ export default function PatientUpcomingEvents() {
     if (!token) return alert("User not logged in");
 
     try {
-      setCanceling(true);
+      setCanceling(appointmentId); 
       const res = await fetch(
-        `http://127.0.0.1:8000/appointments/patients/cancel/${appointmentId}`,
+        `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/patients/cancel/${appointmentId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -42,10 +42,10 @@ export default function PatientUpcomingEvents() {
       setBookedSlots((prev) =>
         prev.filter((slot) => slot.appointment_id !== appointmentId)
       );
-      setCanceling(false);
+      setCanceling(null);
       alert("Appointment cancelled successfully");
     } catch (err) {
-      setCanceling(false);
+      setCanceling(null);
       console.error(err);
       alert(err.message);
     }
@@ -63,7 +63,7 @@ export default function PatientUpcomingEvents() {
         }
 
         const res = await fetch(
-          `http://127.0.0.1:8000/appointments/patients/${patientId}`,
+          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/patients/${patientId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -168,7 +168,8 @@ export default function PatientUpcomingEvents() {
                       color="error"
                       onClick={() => Cancel(slot.appointment_id)}
                       sx={{ borderRadius: 3, textTransform: "none", px: 3 }}
-                      loading={canceling}
+                      loading={canceling === slot.appointment_id}   // ✅ only loading one
+                      disabled={slot.status === "rejected"}
                     >
                       Cancel
                     </LoadingButton>

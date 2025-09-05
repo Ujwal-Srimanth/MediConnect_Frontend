@@ -48,7 +48,7 @@ function Signup() {
     setloadingVerify(true);
 
     // 1️⃣ Check if receptionist exists in the system
-    const resReceptionist = await fetch(`http://127.0.0.1:8000/doctors/receptionist/${id}`, {
+    const resReceptionist = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/receptionist/${id}`, {
       method: "GET",
     });
 
@@ -71,7 +71,7 @@ function Signup() {
     console.log(resReceptionist);
 
     // 2️⃣ Check if receptionistID is already registered in your users collection
-    const resRegistered = await fetch(`http://127.0.0.1:8000/api/auth/verify-id`, {
+    const resRegistered = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/verify-id`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -118,7 +118,7 @@ function Signup() {
     setloadingVerify(true);
 
     // 1️⃣ Check if doctor exists in the system
-    const resDoctor = await fetch(`http://127.0.0.1:8000/doctors/${id}`, { method: "GET" });
+    const resDoctor = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/${id}`, { method: "GET" });
     if (!resDoctor.ok) {
       setIsVerified(false);
       setloadingVerify(false);
@@ -137,7 +137,7 @@ function Signup() {
     console.log(resDoctor);
 
     // 2️⃣ Check if doctorID is already registered in your users collection
-    const resRegistered = await fetch(`http://127.0.0.1:8000/api/auth/verify-id`, {
+    const resRegistered = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/verify-id`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -208,7 +208,7 @@ function Signup() {
     }
 
     try {
-        const response = await axios.post("http://127.0.0.1:8000/api/auth/signup", signupData);
+        const response = await axios.post("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/signup", signupData);
         setLoading(false);
         navigate("/");
     } catch (error) {

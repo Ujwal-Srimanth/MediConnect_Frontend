@@ -53,7 +53,7 @@ export default function DoctorSchedulePage() {
       try {
         setLoadingSchedules(true);
 
-        const res = await fetch(`http://127.0.0.1:8000/schedules/${id}`, {
+        const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -107,7 +107,7 @@ export default function DoctorSchedulePage() {
         setLoadingSlots(true);
 
         const res = await fetch(
-          `http://127.0.0.1:8000/doctors/${id}/${selectedDate}/slots`,
+          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/${id}/${selectedDate}/slots`,
           {
             method: "GET",
             headers: {
@@ -180,7 +180,7 @@ export default function DoctorSchedulePage() {
         purpose,
       };
 
-      const res = await fetch(`http://127.0.0.1:8000/appointments/${id}/book`, {
+      const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/${id}/book`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

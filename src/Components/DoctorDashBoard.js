@@ -51,7 +51,7 @@ export default function DoctorDashboard() {
 
         // 1️⃣ Fetch user ID
         const resUser = await fetch(
-          `http://127.0.0.1:8000/api/auth/get-id/${email}`,
+          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/get-id/${email}`,
           {
             method: "GET",
             headers: {
@@ -66,7 +66,7 @@ export default function DoctorDashboard() {
         // 2️⃣ Check doctor exists
         if (userData.ID.startsWith("DOC")) {
           const resDoctor = await fetch(
-            `http://127.0.0.1:8000/schedules/check-doctor/${userData.ID}`,
+            `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/check-doctor/${userData.ID}`,
             {
               method: "GET",
               headers: {
@@ -81,7 +81,7 @@ export default function DoctorDashboard() {
           // 3️⃣ Fetch appointments (only if doctor exists)
           if (doctorData.exists) {
             const resAppointments = await fetch(
-              `http://127.0.0.1:8000/appointments/${userData.ID}`,
+              `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/${userData.ID}`,
               {
                 method: "GET",
                 headers: {
@@ -109,7 +109,7 @@ export default function DoctorDashboard() {
     try {
       if (patientData[email]) return; // already cached
       const res = await fetch(
-        `http://127.0.0.1:8000/patients?email_address=${email}`,
+        `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/?email_address=${email}`,
         {
           method: "GET",
           headers: {
@@ -165,7 +165,7 @@ export default function DoctorDashboard() {
     };
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/schedules", {
+      const res = await fetch("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -36,7 +36,7 @@ export default function ReceptionistForm() {
         return;
       }
 
-      const response = await fetch("http://localhost:8000/admin/receptionists", {
+      const response = await fetch("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/admin/receptionists", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

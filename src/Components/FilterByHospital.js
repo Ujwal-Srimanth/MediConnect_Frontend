@@ -31,7 +31,7 @@ export default function FilterByHospitalPage() {
     const fetchHospitalData = async () => {
       setLoading(true)
       try {
-        const res = await fetch(`http://127.0.0.1:8000/hospital`, {
+        const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/hospital/`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

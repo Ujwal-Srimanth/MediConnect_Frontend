@@ -58,7 +58,7 @@ export default function PatientForm() {
     try {
       const email = localStorage.getItem("email");  
 
-const res = await fetch(`http://127.0.0.1:8000/patients?email_address=${email}`, {
+const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/?email_address=${email}`, {
   method: "GET",
   headers: {
     "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -158,7 +158,7 @@ const res = await fetch(`http://127.0.0.1:8000/patients?email_address=${email}`,
     }
     try {
 
-const res = await fetch("http://127.0.0.1:8000/patients", {
+const res = await fetch("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/", {
   method: "POST",
   headers: {
     "Authorization": `Bearer ${token}`

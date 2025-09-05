@@ -65,7 +65,7 @@ function ForgotPasswordPage() {
     const verifyOTP = async (e) => {
         try{
         setLoadingOTP(true);
-        const response = await axios.post("http://127.0.0.1:8000/api/auth/verify-otp",{
+        const response = await axios.post("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/verify-otp",{
             email:email,
             otp:otpInput
         })
@@ -90,7 +90,7 @@ function ForgotPasswordPage() {
     const VerifyEmail = async () => {
     setLoadingEmail(true);
   try {
-    const response = await axios.get("http://127.0.0.1:8000/api/auth/verify-user-email", {
+    const response = await axios.get("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/verify-user-email", {
       params: { email },
     });
 
@@ -113,7 +113,7 @@ function ForgotPasswordPage() {
         e.preventDefault();
         setLoadingPassword(true);
         try{
-            const response = await axios.post("http://127.0.0.1:8000/api/auth/forgot-password",{
+            const response = await axios.post("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/forgot-password",{
             email:email,
             new_password:password
         })

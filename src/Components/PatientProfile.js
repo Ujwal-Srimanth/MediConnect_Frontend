@@ -20,6 +20,7 @@ import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
 import SecurityIcon from "@mui/icons-material/Security";
 import { useNavigate } from "react-router-dom";
 import PatientNavbar from "./PatientNavbar"; // <-- import the navbar
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function PatientViewProfile() {
   const [patient, setPatient] = useState(null);
@@ -30,7 +31,7 @@ export default function PatientViewProfile() {
       try {
         const email = localStorage.getItem("email");
         const res = await fetch(
-          `http://127.0.0.1:8000/patients?email_address=${email}`,
+          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/?email_address=${email}`,
           {
             method: "GET",
             headers: {
@@ -52,15 +53,6 @@ export default function PatientViewProfile() {
     fetchPatientData();
   }, []);
 
-  if (!patient) {
-    return (
-      <Box sx={{ textAlign: "center", mt: 10 }}>
-        <Typography variant="h6" color="text.secondary">
-          Loading profile...
-        </Typography>
-      </Box>
-    );
-  }
 
   return (
     <Box sx={{ minHeight: "100vh", background: "linear-gradient(120deg, #e3f2fd, #bbdefb, #90caf9)" }}>
@@ -69,6 +61,15 @@ export default function PatientViewProfile() {
 
       {/* Profile Content */}
       <Box sx={{ p: { xs: 2, md: 6 }, display: "flex", justifyContent: "center" }}>
+         {!patient ? (
+          // Loader while fetching
+          <Stack spacing={2} alignItems="center">
+            <CircularProgress color="primary" />
+            <Typography variant="h6" color="text.secondary">
+              Loading profile...
+            </Typography>
+          </Stack>
+        ) : (
         <Paper
           sx={{
             p: 4,
@@ -196,6 +197,7 @@ export default function PatientViewProfile() {
             </Card>
           </Stack>
         </Paper>
+        )}
       </Box>
     </Box>
   );
