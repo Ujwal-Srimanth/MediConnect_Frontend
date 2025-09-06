@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Avatar,
   TextField,
-  Link,
   Grid,
   Box,
   Typography,
@@ -18,6 +17,8 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "@mui/material";
 
 
 
@@ -144,15 +145,17 @@ function Login() {
 
                     <Grid container direction="column" alignItems="center" spacing={1}>
                         <Grid item xs>
-                            <Link href = "/forgot-password" variant="body2">
-                                Forgot password?
-                            </Link>
+                            <Link component={RouterLink} to="/forgot-password" variant="body2">
+    Forgot password?
+</Link>
                         </Grid>
                         <Grid item>
                             <Typography variant = "body2" component="span">
                                 Dont Have an account? 
                             </Typography>   
-                            <Link href="/signup" sx={{ml:0.1}}>Signup</Link>
+                            <Link component={RouterLink} to="/signup" sx={{ ml: 0.1 }}>
+    Signup
+</Link>
                         </Grid>
                     </Grid>
 
