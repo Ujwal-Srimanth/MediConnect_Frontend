@@ -61,7 +61,14 @@ export default function FilterByDoctorPage() {
     fetchPatientData();
   }, [id]);
 
-  const doctors = doctorList.sort((a, b) => a.name.localeCompare(b.name));
+  const doctors = doctorList.sort((a, b) => {
+  // First, prioritize availability
+  if (a.registered && !b.registered) return -1;
+  if (!a.registered && b.registered) return 1;
+
+  // If both are the same availability, sort by name
+  return a.name.localeCompare(b.name);
+});
 
   const filteredDoctors = doctors.filter(
     (doc) =>

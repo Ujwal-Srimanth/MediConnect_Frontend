@@ -39,7 +39,7 @@ function Login() {
         password,
       });
 
-      const { token, role, email: userEmail,is_profile_filled,id } = response.data;
+      const { token, role, email: userEmail,is_profile_filled,id,mobile } = response.data;
       console.log(response.data);
 
       localStorage.setItem("token", token);
@@ -47,6 +47,7 @@ function Login() {
       localStorage.setItem("email", userEmail);
       localStorage.setItem("is_profile_filled", is_profile_filled);
       localStorage.setItem("user_id",id);
+      localStorage.setItem("mobile",mobile);
 
 
       if (role === "Patient") {

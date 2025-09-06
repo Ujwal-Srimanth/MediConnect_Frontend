@@ -35,7 +35,7 @@ export default function PatientForm() {
     lastName: "",
     dob: "",
     gender: "",
-    contact: "",
+    contact: localStorage.getItem("mobile") || "",
     email: localStorage.getItem("email"),
     address: "",
     height: "",
