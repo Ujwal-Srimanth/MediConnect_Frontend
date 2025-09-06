@@ -32,10 +32,9 @@ jobs:
                const coredemo = require('@actions/core')
                return await coredemo.getIDToken()
            result-encoding: string
-      - name: Debug env
-        run: echo "Base URL is $REACT_APP_API_BASE_URL"
-        env:
-              REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_API_BASE_URL=${{ secrets.REACT_APP_API_BASE_URL }}" >> .env
       - name: Build with Environment Variables
         run: |
             echo "Inside build step, API Base URL is $REACT_APP_API_BASE_URL"
@@ -67,6 +66,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           action: "close"
+
 
 
 
