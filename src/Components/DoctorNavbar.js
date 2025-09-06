@@ -18,11 +18,6 @@ export default function DoctorNavbar() {
   const handleMenuOpen = (e) => setAnchorEl(e.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
 
-  const handleEditSchedule = () => {
-    handleMenuClose();
-    navigate("/doctor-dashboard"); // 👈 or "/doctor-schedule" if separate page
-  };
-
   const handleLogout = () => {
     handleMenuClose();
     localStorage.removeItem("token");
