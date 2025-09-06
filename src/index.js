@@ -12,6 +12,8 @@ const theme = createTheme({
   },
 });
 
+console.log("API Base URL from env:", process.env.REACT_APP_API_BASE_URL);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
