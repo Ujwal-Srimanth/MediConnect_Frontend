@@ -41,7 +41,7 @@ export default function DoctorForm() {
         return;
       }
 
-      const response = await fetch("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/admin/doctors", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/admin/doctors`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

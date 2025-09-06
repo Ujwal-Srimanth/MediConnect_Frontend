@@ -31,7 +31,7 @@ export default function PatientViewProfile() {
       try {
         const email = localStorage.getItem("email");
         const res = await fetch(
-          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/?email_address=${email}`,
+          `${process.env.REACT_APP_API_BASE_URL}/patients/?email_address=${email}`,
           {
             method: "GET",
             headers: {

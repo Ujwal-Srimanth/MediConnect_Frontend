@@ -51,7 +51,7 @@ export default function DoctorDashboard() {
 
         // 1️⃣ Fetch user ID
         const resUser = await fetch(
-          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/get-id/${email}`,
+          `${process.env.REACT_APP_API_BASE_URL}/api/auth/get-id/${email}`,
           {
             method: "GET",
             headers: {
@@ -66,7 +66,7 @@ export default function DoctorDashboard() {
         // 2️⃣ Check doctor exists
         if (userData.ID.startsWith("DOC")) {
           const resDoctor = await fetch(
-            `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/check-doctor/${userData.ID}`,
+            `${process.env.REACT_APP_API_BASE_URL}/schedules/check-doctor/${userData.ID}`,
             {
               method: "GET",
               headers: {
@@ -81,7 +81,7 @@ export default function DoctorDashboard() {
           // 3️⃣ Fetch appointments (only if doctor exists)
           if (doctorData.exists) {
             const resAppointments = await fetch(
-              `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/${userData.ID}`,
+              `${process.env.REACT_APP_API_BASE_URL}/appointments/${userData.ID}`,
               {
                 method: "GET",
                 headers: {
@@ -109,7 +109,7 @@ export default function DoctorDashboard() {
     try {
       if (patientData[email]) return; // already cached
       const res = await fetch(
-        `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/patients/?email_address=${email}`,
+        `${process.env.REACT_APP_API_BASE_URL}/patients/?email_address=${email}`,
         {
           method: "GET",
           headers: {
@@ -165,7 +165,7 @@ export default function DoctorDashboard() {
     };
     setLoading(true);
     try {
-      const res = await fetch("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/", {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/schedules/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

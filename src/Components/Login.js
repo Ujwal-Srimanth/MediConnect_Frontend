@@ -35,7 +35,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/api/auth/login", {
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/login`, {
         email,
         password,
       });

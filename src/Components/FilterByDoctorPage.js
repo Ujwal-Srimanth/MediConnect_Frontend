@@ -34,9 +34,9 @@ export default function FilterByDoctorPage() {
     const fetchPatientData = async () => {
       setLoading(true);
       try {
-        let url = "https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/";
+        let url = `${process.env.REACT_APP_API_BASE_URL}/doctors/`;
         if (id) {
-          url = `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/hospital/${id}`;
+          url = `${process.env.REACT_APP_API_BASE_URL}/doctors/hospital/${id}`;
         }
 
         console.log(id);

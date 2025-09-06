@@ -34,7 +34,7 @@ export default function ReceptionistDashboard() {
       try {
         const email = localStorage.getItem("email");
         const res = await fetch(
-          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/receptionist/${email}/appointments`,
+          `${process.env.REACT_APP_API_BASE_URL}/doctors/receptionist/${email}/appointments`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -64,7 +64,7 @@ export default function ReceptionistDashboard() {
     action === "approve" ? setLoadingApproveId(id) : setLoadingRejectId(id);
     setLoadingActions((prev) => ({ ...prev, [id]: true }));
     try {
-      const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/${id}/status`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/appointments/${id}/status`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

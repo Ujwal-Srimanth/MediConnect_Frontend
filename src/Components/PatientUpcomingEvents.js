@@ -29,7 +29,7 @@ export default function PatientUpcomingEvents() {
     try {
       setCanceling(appointmentId); 
       const res = await fetch(
-        `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/patients/cancel/${appointmentId}`,
+        `${process.env.REACT_APP_API_BASE_URL}/appointments/patients/cancel/${appointmentId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -63,7 +63,7 @@ export default function PatientUpcomingEvents() {
         }
 
         const res = await fetch(
-          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/patients/${patientId}`,
+          `${process.env.REACT_APP_API_BASE_URL}/appointments/patients/${patientId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

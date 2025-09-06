@@ -53,7 +53,7 @@ export default function DoctorSchedulePage() {
       try {
         setLoadingSchedules(true);
 
-        const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/schedules/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/schedules/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -107,7 +107,7 @@ export default function DoctorSchedulePage() {
         setLoadingSlots(true);
 
         const res = await fetch(
-          `https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/doctors/${id}/${selectedDate}/slots`,
+          `${process.env.REACT_APP_API_BASE_URL}/doctors/${id}/${selectedDate}/slots`,
           {
             method: "GET",
             headers: {
@@ -141,7 +141,28 @@ export default function DoctorSchedulePage() {
     fetchSlots();
   }, [selectedDate, id]);
 
-  const slotsForDay = selectedDate && slots.filter((s) => s.date === selectedDate);
+const slotsForDay =
+  selectedDate &&
+  slots.filter((s) => {
+    if (s.date !== selectedDate) return false; // keep only slots of selected date
+
+    const now = new Date();
+    const selected = new Date(selectedDate);
+    const slotStart = new Date(s.startDateTime);
+
+    // If today → filter out slots before now+30min
+    if (
+      selected.getFullYear() === now.getFullYear() &&
+      selected.getMonth() === now.getMonth() &&
+      selected.getDate() === now.getDate()
+    ) {
+      const cutoff = new Date(now.getTime() + 30 * 60000);
+      return slotStart > cutoff;
+    }
+
+    return true;
+  });
+
 
   function toLocalISOString(date) {
     const pad = (n) => String(n).padStart(2, "0");
@@ -180,7 +201,7 @@ export default function DoctorSchedulePage() {
         purpose,
       };
 
-      const res = await fetch(`https://mediconnect-backend-g7g9gjaxeacxbtd2.centralindia-01.azurewebsites.net/appointments/${id}/book`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/appointments/${id}/book`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
