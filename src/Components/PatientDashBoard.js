@@ -49,7 +49,6 @@ export default function PatientDashBoard() {
   const [appointments, setAppointments] = useState([]);
   const [loadingAnalytics, setLoadingAnalytics] = useState(true);
   const [aiAdvice, setAiAdvice] = useState("Your personalized health advice will appear here.");
-  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -170,7 +169,6 @@ export default function PatientDashBoard() {
   }, []);
 
   // Format AI advice into lines
-  const adviceLines = aiAdvice.split(/[\n•-]+/).map((line) => line.trim()).filter((line) => line);
 
   return (
     <Box
