@@ -7,7 +7,6 @@ import {
   Paper,
   Divider,
   Box,
-  MenuItem,
 } from "@mui/material";
 import AdminNavbar from "./AdminNavbar";
 

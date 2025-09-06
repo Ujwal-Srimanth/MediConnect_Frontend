@@ -8,7 +8,6 @@ import {
   Paper,
   Divider,
   Box,
-  Alert,
 } from "@mui/material";
 import AdminNavbar from "./AdminNavbar";
 
@@ -96,7 +95,7 @@ export default function DoctorForm() {
         }}
       >
 
-        <Paper sx={{ p: 4, maxWidth: 900, mx: "auto", my: 2, my: 2 , mt: -4, // 👈 push it slightly up
+        <Paper sx={{ p: 4, maxWidth: 900, mx: "auto", my: 2 , mt: -4, // 👈 push it slightly up
     backgroundColor: "#f1f8f6", // 👈 subtle green for contrast
     boxShadow: 3, // slight shadow for depth
     borderRadius: 3, // smoother corners

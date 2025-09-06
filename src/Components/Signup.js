@@ -1,12 +1,8 @@
-import {Routes,Route, Navigate} from 'react-router-dom'
 import LoadingButton from '@mui/lab/LoadingButton';
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Avatar,
-  Button,
   TextField,
-  Link,
-  Grid,
   Box,
   Typography,
   Container,
@@ -208,7 +204,7 @@ function Signup() {
     }
 
     try {
-        const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/signup`, signupData);
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/signup`, signupData);
         setLoading(false);
         navigate("/");
     } catch (error) {

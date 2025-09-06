@@ -13,7 +13,6 @@ import {
   Alert
 } from "@mui/material";
 import LinearProgress from "@mui/material/LinearProgress";
-import { Navigate } from "react-router-dom";
 import { Chip, Stack } from "@mui/material";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import PatientNavbar from "./PatientNavbar";

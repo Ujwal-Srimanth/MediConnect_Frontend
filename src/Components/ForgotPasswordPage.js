@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import {
-  Avatar,
-  Button,
   TextField,
-  Link,
-  Grid,
   Box,
-  Typography,
   Container,
   Paper,
   IconButton,
-  MenuItem
 } from '@mui/material';
 import LoginImage from '../Static/LoginImage.jpg'; 
 import InputAdornment from "@mui/material/InputAdornment";

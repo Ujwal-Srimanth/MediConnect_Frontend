@@ -1,8 +1,6 @@
-import {Routes,Route, Navigate} from 'react-router-dom'
 import React, { useState } from 'react';
 import {
   Avatar,
-  Button,
   TextField,
   Link,
   Grid,
@@ -40,7 +38,7 @@ function Login() {
         password,
       });
 
-      const { token:token, role:role, email: userEmail,is_profile_filled:is_profile_filled,id:id } = response.data;
+      const { token, role, email: userEmail,is_profile_filled,id } = response.data;
       console.log(response.data);
 
       localStorage.setItem("token", token);

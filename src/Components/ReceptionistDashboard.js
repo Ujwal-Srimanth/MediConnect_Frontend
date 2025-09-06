@@ -22,10 +22,7 @@ import ReceptionistNavbar from "./ReceptionistNavbar";
 export default function ReceptionistDashboard() {
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [loadingApprove,setLoadingApprove] = useState(false);
-  const [loadingReject,setLoadingReject] = useState(false);
   const [expanded, setExpanded] = useState({});
-  const [loadingActions, setLoadingActions] = useState({}); // track per-appointment loading
   const [loadingApproveId, setLoadingApproveId] = useState(null);
   const [loadingRejectId, setLoadingRejectId] = useState(null);
 
@@ -62,7 +59,6 @@ export default function ReceptionistDashboard() {
 
   const handleAction = async (id, action) => {
     action === "approve" ? setLoadingApproveId(id) : setLoadingRejectId(id);
-    setLoadingActions((prev) => ({ ...prev, [id]: true }));
     try {
       const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/appointments/${id}/status`, {
         method: "POST",
@@ -91,7 +87,6 @@ export default function ReceptionistDashboard() {
       alert("Error updating appointment status");
     } finally {
       action === "approve" ? setLoadingApproveId(null) : setLoadingRejectId(null);
-      setLoadingActions((prev) => ({ ...prev, [id]: false }));
     }
   };
 
