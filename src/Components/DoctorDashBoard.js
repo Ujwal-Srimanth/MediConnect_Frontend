@@ -32,9 +32,8 @@ import { Check, Close} from "@mui/icons-material";
 
 // Calendar imports
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
-import { format, parse, startOfWeek, getDay, set } from "date-fns";
+import { format, parse, startOfWeek, getDay } from "date-fns";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { TabList } from "@mui/lab";
 
 const locales = {
   "en-US": require("date-fns/locale/en-US"),
@@ -309,11 +308,6 @@ const handleAction = async (id, action) => {
   }
 };
 
-
-  // Calendar Events
-  const futureAppointments = appointments.filter((appt) => new Date(appt.start_datetime) >= new Date());
-  const pastAppointments = appointments.filter((appt) => new Date(appt.end_datetime) < new Date());
-
   const [calendarView, setCalendarView] = useState("month");
 
   const appointmentCounts = appointments.reduce((acc, appt) => {
@@ -338,17 +332,6 @@ const detailedEvents = appointments.map((appt) => ({
   end: new Date(appt.end_datetime),
   appointmentId: appt.appointment_id,
 }));
-
-
-  const events = Object.entries(appointmentCounts).map(([dateKey, count]) => {
-  const date = new Date(dateKey);
-  return {
-    title: `${count} Appointments`, // show count
-    start: date,
-    end: date,
-    allDay: true,
-  };
-});
 
   const handleSelectEvent = (event) => {
     const appt = appointments.find((a) => a.appointment_id === event.appointmentId);
