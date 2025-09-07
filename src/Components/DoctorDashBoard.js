@@ -293,6 +293,21 @@ const handleAction = async (id, action) => {
     });
 
     if (res.ok) {
+      setAppointments((prev) =>
+    prev.map((appt) =>
+      appt.appointment_id === selectedAppointment.appointment_id
+        ? { ...appt, medical_records: [...(appt.medical_records || []), ...selectedFiles.map(f => ({ filename: f.name, url: URL.createObjectURL(f) }))] }
+        : appt
+    )
+  );
+
+  setFilteredAppointments((prev) =>
+    prev.map((appt) =>
+      appt.appointment_id === selectedAppointment.appointment_id
+        ? { ...appt, medical_records: [...(appt.medical_records || []), ...selectedFiles.map(f => ({ filename: f.name, url: URL.createObjectURL(f) }))] }
+        : appt
+    )
+  );
       setUpload(false);
       alert("Files uploaded successfully!");
       setUploadDialogOpen(false);
@@ -310,7 +325,11 @@ const handleAction = async (id, action) => {
 
   const [calendarView, setCalendarView] = useState("month");
 
-  const appointmentCounts = appointments.reduce((acc, appt) => {
+  // Calendar should only consider approved appointments
+const approvedAppointments = appointments.filter(appt => appt.status === "approved");
+
+// Aggregated events for month view
+const appointmentCounts = approvedAppointments.reduce((acc, appt) => {
   const dateKey = new Date(appt.start_datetime).toDateString();
   acc[dateKey] = (acc[dateKey] || 0) + 1;
   return acc;
@@ -326,12 +345,14 @@ const aggregatedEvents = Object.entries(appointmentCounts).map(([dateKey, count]
   };
 });
 
-const detailedEvents = appointments.map((appt) => ({
+// Detailed events for week/day view
+const detailedEvents = approvedAppointments.map((appt) => ({
   title: `${appt.patient_email} (${appt.purpose})`,
   start: new Date(appt.start_datetime),
   end: new Date(appt.end_datetime),
   appointmentId: appt.appointment_id,
 }));
+
 
   const handleSelectEvent = (event) => {
     const appt = appointments.find((a) => a.appointment_id === event.appointmentId);
