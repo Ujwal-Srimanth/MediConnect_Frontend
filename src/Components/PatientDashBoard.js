@@ -27,7 +27,7 @@ import Image3 from "../Static/profile.jpg";
 import axios from "axios";
 
 // Chart
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function PatientDashBoard() {
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ export default function PatientDashBoard() {
   useEffect(() => {
     const fetchPatientData = async () => {
       try {
-        const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://127.0.0.1:8000";
+        const BASE_URL = process.env.REACT_APP_API_BASE_URL ;
         const token = localStorage.getItem("token");
         const email = localStorage.getItem("email");
 
@@ -98,7 +98,7 @@ export default function PatientDashBoard() {
 
     const fetchAppointments = async () => {
       try {
-        const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://127.0.0.1:8000"
+        const BASE_URL = process.env.REACT_APP_API_BASE_URL 
         const token = localStorage.getItem("token");
         const userId = localStorage.getItem("user_id");
 
@@ -142,7 +142,7 @@ export default function PatientDashBoard() {
       `;
 
       try {
-        const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://127.0.0.1:8000"
+        const BASE_URL = process.env.REACT_APP_API_BASE_URL 
         const res = await axios.post(
           `${BASE_URL}/patients/api/patient-analytics`,
           { prompt }
@@ -253,7 +253,7 @@ export default function PatientDashBoard() {
             </Stack>
           ) : (
             <>
-          <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 3, mb: 4 }}>
+          <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 3, mb: 4 ,backgroundColor: "#F0F8FF"}}>
   <Typography variant="h6" fontWeight="bold">Personalized Advice</Typography>
   <Divider sx={{ my: 2 }} />
   <Box sx={{ textAlign: "left" }}>
@@ -262,22 +262,22 @@ export default function PatientDashBoard() {
 </Paper>
 
 
-              <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 3 }}>
-                <Typography variant="h6" fontWeight="bold">Appointments Overview</Typography>
-                <Divider sx={{ my: 2 }} />
-                {chartData.length === 0 ? (
-                  <Typography>No appointments to display</Typography>
-                ) : (
-                  <ResponsiveContainer width="100%" height={300}>
-                    <BarChart data={chartData}>
-                      <XAxis dataKey="date" />
-                      <YAxis allowDecimals={false} />
-                      <Tooltip />
-                      <Bar dataKey="count" fill="#1976d2" />
-                    </BarChart>
-                  </ResponsiveContainer>
-                )}
-              </Paper>
+              <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 3 ,backgroundColor: "#F0F8FF" }}>
+  <Typography variant="h6" fontWeight="bold">Appointments Overview</Typography>
+  <Divider sx={{ my: 2 }} />
+  {chartData.length === 0 ? (
+    <Typography>No appointments to display</Typography>
+  ) : (
+    <ResponsiveContainer width="100%" height={300}>
+      <LineChart data={chartData}>
+        <XAxis dataKey="date" />
+        <YAxis allowDecimals={false} />
+        <Tooltip />
+        <Line type="monotone" dataKey="count" stroke="#1976d2" strokeWidth={3} dot={{ r: 5 }} />
+      </LineChart>
+    </ResponsiveContainer>
+  )}
+</Paper>
             </>
           )}
         </Box>

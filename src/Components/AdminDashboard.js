@@ -8,9 +8,11 @@ import {
   CardContent,
   Grid,
   Divider,
+  CircularProgress,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import AdminNavbar from "./AdminNavbar"; // ✅ Optional reusable navbar like PatientNavbar
+import AdminNavbar from "./AdminNavbar";
+import AdminDashboardAnalytics from "./AdminDashboardAnalytics"; // ✅ analytics page
 import Image from "../Static/image.jpg";
 import Image1 from "../Static/image1.jpg";
 import Image2 from "../Static/receptionist.jpg";
@@ -39,6 +41,18 @@ export default function AdminDashboard() {
     { title: "Add Hospital", image: Image1, route: "/add-hospital" },
     { title: "Add Receptionist", image: Image2, route: "/add-receptionist" },
   ];
+
+  // Loader for analytics
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate API fetch for analytics
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Box
@@ -135,6 +149,29 @@ export default function AdminDashboard() {
             </Grid>
           ))}
         </Grid>
+
+        {/* Analytics Section - below all option cards */}
+<Box
+  sx={{
+    mt: 6,
+    p: 4,
+    borderRadius: 4,
+    backgroundColor: "#F0FFF0",
+    boxShadow: 6,
+  }}
+>
+  <Typography variant="h5" fontWeight="bold" mb={3} textAlign="center">
+    📊 Analytics Overview
+  </Typography>
+
+  {loading ? (
+    <Box display="flex" justifyContent="center" alignItems="center" mt={5}>
+      <CircularProgress />
+    </Box>
+  ) : (
+    <AdminDashboardAnalytics />
+  )}
+</Box>
       </Box>
     </Box>
   );

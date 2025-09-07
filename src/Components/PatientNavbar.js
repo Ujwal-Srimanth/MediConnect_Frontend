@@ -89,6 +89,15 @@ export default function PatientNavbar() {
             Upcoming Appointments
           </MenuItem>
           <MenuItem
+            onClick={() => {
+              handleMenuClose();
+              navigate("/patient-past-events");
+            }}
+            sx={{ "&:hover": { backgroundColor: "#f1f9fc" } }}
+          >
+            Past Appointments
+          </MenuItem>
+          <MenuItem
             onClick={handleLogout}
             sx={{ "&:hover": { backgroundColor: "#f1f9fc" } }}
           >

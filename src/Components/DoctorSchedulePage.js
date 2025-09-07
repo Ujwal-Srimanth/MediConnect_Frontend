@@ -89,7 +89,11 @@ export default function DoctorSchedulePage() {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
       const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-      const formattedDate = date.toISOString().split("T")[0];
+      const pad = (n) => String(n).padStart(2, "0");
+    const formattedDate = 
+        date.getFullYear() + "-" +
+        pad(date.getMonth() + 1) + "-" +
+        pad(date.getDate());
 
       if (!defaultHolidays.includes(dayName)) {
         next7Days.push({ date: formattedDate, day: dayName });

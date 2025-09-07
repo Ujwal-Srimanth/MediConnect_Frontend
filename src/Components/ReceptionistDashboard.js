@@ -41,7 +41,6 @@ export default function ReceptionistDashboard() {
         );
         const data = await res.json();
 
-        // Only future appointments
         const now = new Date();
         const futureAppointments = (data.appointments || []).filter(
           (appt) => new Date(appt.start_datetime) > now
@@ -73,16 +72,11 @@ export default function ReceptionistDashboard() {
 
       const data = await res.json();
 
-      // Update appointment status in UI
       setAppointments((prev) =>
-        prev.map((appt) =>
-          appt._id === id ? { ...appt, status: data.status } : appt
-        )
+        prev.map((appt) => (appt._id === id ? { ...appt, status: data.status } : appt))
       );
       alert(`Appointment ${action}ed successfully`);
-      action === "approve" ? setLoadingApproveId(null) : setLoadingRejectId(null);
     } catch (err) {
-     action === "approve" ? setLoadingApproveId(null) : setLoadingRejectId(null);
       console.error(err);
       alert("Error updating appointment status");
     } finally {
@@ -94,20 +88,132 @@ export default function ReceptionistDashboard() {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  const renderTable = (list, showActions = false) => (
+    <Paper elevation={3} sx={{ p: 3, borderRadius: 3, mb: 4 }}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell />
+            <TableCell>Doctor</TableCell>
+            <TableCell>Date</TableCell>
+            <TableCell>Start</TableCell>
+            <TableCell>End</TableCell>
+            <TableCell>Purpose</TableCell>
+            <TableCell>Status</TableCell>
+            {showActions && <TableCell>Actions</TableCell>}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {list.map((appt) => (
+            <React.Fragment key={appt._id}>
+              <TableRow>
+                <TableCell>
+                  <IconButton onClick={() => toggleExpand(appt._id)}>
+                    {expanded[appt._id] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                  </IconButton>
+                </TableCell>
+                <TableCell>{appt.doctor_name}</TableCell>
+                <TableCell>{appt.date}</TableCell>
+                <TableCell>{new Date(appt.start_datetime).toLocaleTimeString()}</TableCell>
+                <TableCell>{new Date(appt.end_datetime).toLocaleTimeString()}</TableCell>
+                <TableCell>{appt.purpose || "-"}</TableCell>
+                <TableCell>{appt.status}</TableCell>
+                {showActions && (
+                  <TableCell>
+                    <LoadingButton
+                      variant="contained"
+                      color="success"
+                      size="small"
+                      sx={{ mr: 1 }}
+                      startIcon={<Check />}
+                      onClick={() => handleAction(appt._id, "approve")}
+                      disabled={appt.status !== "pending"}
+                      loading={loadingApproveId === appt._id}
+                    >
+                      Approve
+                    </LoadingButton>
+
+                    <LoadingButton
+                      variant="contained"
+                      color="error"
+                      size="small"
+                      startIcon={<Close />}
+                      onClick={() => handleAction(appt._id, "reject")}
+                      disabled={appt.status !== "pending"}
+                      loading={loadingRejectId === appt._id}
+                    >
+                      Cancel
+                    </LoadingButton>
+                  </TableCell>
+                )}
+              </TableRow>
+
+              <TableRow>
+                <TableCell colSpan={8} sx={{ p: 0, border: 0 }}>
+                  <Collapse in={expanded[appt._id]} timeout="auto" unmountOnExit>
+                    <Card
+                      variant="outlined"
+                      sx={{
+                        my: 2,
+                        backgroundColor: "#fafcff",
+                        borderRadius: 3,
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                      }}
+                    >
+                      <CardContent>
+                        <Typography
+                          variant="h6"
+                          gutterBottom
+                          sx={{
+                            color: "#0d47a1",
+                            fontWeight: 700,
+                            borderBottom: "2px solid #e3f2fd",
+                            pb: 1,
+                            mb: 2,
+                          }}
+                        >
+                          Appointment Details
+                        </Typography>
+                        <Grid container spacing={2}>
+                          <Grid item xs={6}>
+                            <Typography><b>Doctor:</b> {appt.doctor_name}</Typography>
+                          </Grid>
+                          <Grid item xs={6}>
+                            <Typography><b>Purpose:</b> {appt.purpose || "-"}</Typography>
+                          </Grid>
+                          <Grid item xs={6}>
+                            <Typography><b>Status:</b> {appt.status}</Typography>
+                          </Grid>
+                          <Grid item xs={6}>
+                            <Typography><b>Start Time:</b> {new Date(appt.start_datetime).toLocaleTimeString()}</Typography>
+                          </Grid>
+                          <Grid item xs={6}>
+                            <Typography><b>End Time:</b> {new Date(appt.end_datetime).toLocaleTimeString()}</Typography>
+                          </Grid>
+                        </Grid>
+                      </CardContent>
+                    </Card>
+                  </Collapse>
+                </TableCell>
+              </TableRow>
+            </React.Fragment>
+          ))}
+        </TableBody>
+      </Table>
+    </Paper>
+  );
+
   if (loading) {
     return (
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         <CircularProgress />
       </Box>
     );
   }
+
+  const pendingAppointments = appointments.filter((a) => a.status === "pending");
+  const approvedAppointments = appointments.filter((a) => a.status === "approved");
+  const rejectedAppointments = appointments.filter((a) => a.status === "rejected");
 
   return (
     <>
@@ -117,117 +223,38 @@ export default function ReceptionistDashboard() {
           Receptionist Dashboard
         </Typography>
 
-        {appointments.length === 0 ? (
-          <Typography>No appointments found</Typography>
-        ) : (
-          <Paper elevation={3} sx={{ p: 3, borderRadius: 3 }}>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell />
-                  <TableCell>Doctor</TableCell>
-                  <TableCell>Date</TableCell>
-                  <TableCell>Start</TableCell>
-                  <TableCell>End</TableCell>
-                  <TableCell>Purpose</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>Actions</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {appointments.map((appt) => (
-                  <React.Fragment key={appt._id}>
-                    <TableRow>
-                      <TableCell>
-                        <IconButton onClick={() => toggleExpand(appt._id)}>
-                          {expanded[appt._id] ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-                        </IconButton>
-                      </TableCell>
-                      <TableCell>{appt.doctor_name}</TableCell>
-                      <TableCell>{appt.date}</TableCell>
-                      <TableCell>{new Date(appt.start_datetime).toLocaleTimeString()}</TableCell>
-                      <TableCell>{new Date(appt.end_datetime).toLocaleTimeString()}</TableCell>
-                      <TableCell>{appt.purpose || "-"}</TableCell>
-                      <TableCell>{appt.status}</TableCell>
-                      <TableCell>
-                        <LoadingButton
-                          variant="contained"
-                          color="success"
-                          size="small"
-                          sx={{ mr: 1 }}
-                          startIcon={<Check />}
-                          onClick={() => handleAction(appt._id, "approve")}
-                          disabled={appt.status === "approved"|| appt.status === "rejected"}
-                        >
-                         {loadingApproveId === appt._id ? "loading" : "Approve"}
-                        </LoadingButton>
+        {/* Note for pending */}
+        {pendingAppointments.length > 0 && (
+          <Typography sx={{ mb: 2, color: "orange", fontWeight: "bold" }}>
+            ⚠️ Please check with the doctor before approving or cancelling any appointment.
+          </Typography>
+        )}
 
-                        <LoadingButton
-                          variant="contained"
-                          color="error"
-                          size="small"
-                          startIcon={<Close />}
-                          onClick={() => handleAction(appt._id, "reject")}
-                          disabled={appt.status === "rejected"}
-                        >
-                          {loadingRejectId === appt._id ? "loading" : "Reject"}
-                        </LoadingButton>
-                      </TableCell>
-                    </TableRow>
+        {pendingAppointments.length > 0 && (
+          <>
+            <Typography variant="h5" sx={{ mb: 2, color: "#1565c0" }}>
+              Pending Appointments
+            </Typography>
+            {renderTable(pendingAppointments, true)}
+          </>
+        )}
 
-                    <TableRow>
-                      <TableCell colSpan={9} sx={{ p: 0, border: 0 }}>
-                        <Collapse in={expanded[appt._id]} timeout="auto" unmountOnExit>
-                          <Card
-                            variant="outlined"
-                            sx={{
-                              my: 2,
-                              backgroundColor: "#fafcff",
-                              borderRadius: 3,
-                              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-                            }}
-                          >
-                            <CardContent>
-                              <Typography
-                                variant="h6"
-                                gutterBottom
-                                sx={{
-                                  color: "#0d47a1",
-                                  fontWeight: 700,
-                                  borderBottom: "2px solid #e3f2fd",
-                                  pb: 1,
-                                  mb: 2,
-                                }}
-                              >
-                                Appointment Details
-                              </Typography>
-                              <Grid container spacing={2}>
-                                <Grid item xs={6}>
-                                  <Typography><b>Doctor:</b> {appt.doctor_name}</Typography>
-                                </Grid>
-                                <Grid item xs={6}>
-                                  <Typography><b>Purpose:</b> {appt.purpose || "-"}</Typography>
-                                </Grid>
-                                <Grid item xs={6}>
-                                  <Typography><b>Status:</b> {appt.status}</Typography>
-                                </Grid>
-                                <Grid item xs={6}>
-                                  <Typography><b>Start Time:</b> {new Date(appt.start_datetime).toLocaleTimeString()}</Typography>
-                                </Grid>
-                                <Grid item xs={6}>
-                                  <Typography><b>End Time:</b> {new Date(appt.end_datetime).toLocaleTimeString()}</Typography>
-                                </Grid>
-                              </Grid>
-                            </CardContent>
-                          </Card>
-                        </Collapse>
-                      </TableCell>
-                    </TableRow>
-                  </React.Fragment>
-                ))}
-              </TableBody>
-            </Table>
-          </Paper>
+        {approvedAppointments.length > 0 && (
+          <>
+            <Typography variant="h5" sx={{ mb: 2, color: "green" }}>
+              Approved Appointments
+            </Typography>
+            {renderTable(approvedAppointments)}
+          </>
+        )}
+
+        {rejectedAppointments.length > 0 && (
+          <>
+            <Typography variant="h5" sx={{ mb: 2, color: "red" }}>
+              Rejected Appointments
+            </Typography>
+            {renderTable(rejectedAppointments)}
+          </>
         )}
       </Box>
     </>

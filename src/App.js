@@ -16,6 +16,7 @@ import AdminDashboard from './Components/AdminDashboard';
 import DoctorForm from './Components/DoctorForm';
 import HospitalForm from './Components/HospitalForm';
 import ReceptionistForm from './Components/ReceptionistForm';
+import PastAppointments from './Components/PastAppointments';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/add-doctor" element={<DoctorForm />} />
         <Route path="/add-hospital" element={<HospitalForm />} />
         <Route path="/add-receptionist" element={<ReceptionistForm />} />
+        <Route path="/patient-past-events" element={<PastAppointments/>} />
 
         {/* Add other routes as needed */}
       </Routes>
