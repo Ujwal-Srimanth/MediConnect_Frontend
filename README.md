@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# MediConnect Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The frontend of **MediConnect** — a healthcare management platform designed to streamline patient–doctor interactions, hospital administration, and appointment management.  
+Built with **React**, **Material UI**, and integrated with **Gemini AI** for analytics and **React Charts** for data visualization.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features by Persona
 
-### `npm start`
+### 👤 Patient
+- View and update profile (demographics, insurance details, medical history).
+- Access all medical reports and prescriptions uploaded by doctors after appointments.
+- Browse available doctors and book appointment slots.
+- View analytics and insights on health & appointments using **Gemini AI** and **React Charts**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏥 Receptionist
+- Approve or cancel appointments.
+- Manage doctors' schedules and appointments within the hospital.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👨‍⚕️ Doctor
+- View complete patient history, including past and upcoming appointments.
+- Upload prescriptions and reports for past appointments.
+- Approve or cancel patient appointments.
 
-### `npm test`
+### 👨‍💼 Admin
+- Onboard new hospitals into the platform.
+- Add hospital staff (doctors, receptionists).
+- Access an **analytics dashboard** for hospital-wide insights.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
+- **React.js** (Frontend)
+- **Material UI (MUI)** (UI Components)
+- **React Charts** (Visualizations)
+- **Gemini AI API** (Analytics)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Deployment link :- https://orange-hill-0603d7a00.1.azurestaticapps.net/
+Backend reposiroty :- https://github.com/Ujwal-Srimanth/MediConnect_Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure
