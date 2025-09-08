@@ -1,7 +1,4 @@
-.
-
-🟦 Frontend README.md
-# MediConnect Frontend
+# 🟦 MediConnect Frontend
 
 The frontend of **MediConnect** — a healthcare management platform designed to streamline patient–doctor interactions, hospital administration, and appointment management.  
 Built with **React**, **Material UI**, and integrated with **Gemini AI** for analytics and **React Charts** for data visualization.
@@ -47,48 +44,38 @@ Built with **React**, **Material UI**, and integrated with **Gemini AI** for ana
 ---
 
 ## 📂 Project Structure
-
-
-frontend/
-│── src/
-│ ├── components/ # Reusable UI components
-│ ├── pages/ # Persona-specific pages
-│ ├── services/ # API calls
-│ ├── utils/ # Helpers & constants
-│ └── App.js
-│── public/
-│── package.json
-
-
----
-
-## ⚡ Deployment
-- Deployed on **Azure Static Web Apps**.
-
----
-
-## ▶️ Getting Started
-
-### Prerequisites
-- Node.js v16+
-- npm or yarn
-
-### Installation
 ```bash
+frontend/
+├── public/
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Persona-specific pages
+│   ├── services/      # API calls
+│   ├── utils/         # Helpers & constants
+│   └── App.js
+├── package.json
+⚡ Deployment
+Deployed on Azure Static Web Apps.
+
+▶️ Getting Started
+✅ Prerequisites
+Node.js v16+
+
+npm or yarn
+
+⚙️ Installation
+bash
+Copy code
 git clone https://github.com/<your-username>/mediconnect-frontend.git
 cd mediconnect-frontend
 npm install
 npm start
-
-
-The app will start on http://localhost:3000.
+The app will start on http://localhost:3000
 
 🔒 Authentication
-
 All requests are authenticated with JWT tokens obtained from the backend.
 
 📊 Analytics
-
 Uses Gemini AI to generate insights and trends.
 
-Charts built with React Charts.
+Charts are built with React Charts.
